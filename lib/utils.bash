@@ -41,7 +41,7 @@ get_arch() {
       ARCH="386"
       ;;
     x86_64)
-      ARCH="amd640"
+      ARCH="amd64"
       ;;
     i686)
       ARCH="386"
