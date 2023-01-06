@@ -31,16 +31,27 @@ list_all_versions() {
 get_arch() {
   ARCH=$(uname -m | tr '[:upper:]' '[:lower:]')
   case $ARCH in
-    armv*) ARCH="arm64";;
-    aarch64) ARCH="arm64";;
-    x86) ARCH="386";;
-    x86_64) ARCH="amd64";;
-    i686) ARCH="386";;
-    i386) ARCH="386";;
+    armv*)
+      ARCH="arm64"
+      ;;
+    aarch64)
+      ARCH="arm64"
+      ;;
+    x86)
+      ARCH="386"
+      ;;
+    x86_64)
+      ARCH="amd640"
+      ;;
+    i686)
+      ARCH="386"
+      ;;
+    i386)
+      ARCH="386"
+      ;;
   esac
   echo "$ARCH"
 }
-
 get_platform() {
   plat=$(uname | tr '[:upper:]' '[:lower:]')
   case ${plat} in
